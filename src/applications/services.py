@@ -5,8 +5,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from applications.repositories import ApplicationRepository
 
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
 
 class ApplicationService:
     def __init__(self, session: AsyncSession, broker: KafkaBroker = None):
